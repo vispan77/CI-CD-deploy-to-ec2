@@ -33,6 +33,23 @@ app.get("/me", (req, res) => {
     })
 })
 
+app.get("/order", (req, res) => {
+    return res.status(200).json({
+        success: true,
+        message: "Order your choosen product"
+    })
+})
+
+
+app.get("product", (req, res) => {
+    return res.status(200).json({
+        success: true,
+        message: "Choose your product to order"
+    })
+})
+
+
+
 const port = process.env.PORT || 7000;
 app.listen(port, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
