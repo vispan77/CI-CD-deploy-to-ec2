@@ -41,7 +41,7 @@ app.get("/order", (req, res) => {
 })
 
 
-app.get("product", (req, res) => {
+app.get("/product", (req, res) => {
     return res.status(200).json({
         success: true,
         message: "Choose your product to order"

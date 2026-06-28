@@ -1,0 +1,22 @@
+write the git hub workflows for ci-cd 
+
+first, name the workflow
+
+then, add the event on which it should trigger.
+In our case, the event is on whenever there is any push in the main branches.
+
+then, define the job.
+In our case, it's 'deploy' which runs on 'ubuntu-latest'.
+
+then, write the steps.
+The first step is to check out the code.
+
+The second step is to connect to the EC2 instance using SSH host and key.
+
+Then, write the script to execute in the instance.
+This script should pull the newly pushed code from GitHub, then stop the running container, build a new image
+with the new code, and then run the container again.
+
+then write the script to exceute in the instance 
+that pull the newly pushed code in the github and then stop the running conatiner and build the new image 
+with the new code and then again run the conatiner
