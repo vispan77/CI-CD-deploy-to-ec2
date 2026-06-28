@@ -21,4 +21,7 @@ jobs:
           username: ubuntu
           key: ${{secrets.SSH_KEY}}
           script: |
-            
+            cd ~/CI-CD-deploy-to-ec2
+            git pull
+            sudo docker compose down
+            sudo docker compose up -d --build
